@@ -1,8 +1,9 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template_string
 import requests
-import re
+from threading import Thread, Event
 import time
-import os
+import random
+import string
 
 app = Flask(__name__)
 app.debug = True
